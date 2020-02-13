@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Affordable and Clean Energy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
 body {
@@ -20,7 +21,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #434343ff;
+  background-image: linear-gradient(to left, #fcc30bff, #5b92e5ff, #3f7e44ff);
 }
 
 li {
@@ -45,6 +46,77 @@ li a:hover {
   color: black;
   background-color: #5b92e5ff;
 }
+
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+  }
+
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+    align-content: center;    
+    justify-content: center;
+    margin-top: 200px;
+  }
+
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 5px;
+    font-size: 30px;
+
+  }
+
+  .button {
+  background-color: #5b92e5ff;
+  border: none;
+  color: white;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
 </style>
 </head>
 <body>
@@ -52,9 +124,42 @@ li a:hover {
   <li><a href="index.html">Home</a></li>
   <li><a  class="active" href="indexgoal7.html">Goal 7</a></li>
   <li><a href="indexgoal13.html">Goal 13</a></li>
-  <li><a href="#link">Common Link</a></li>
+  <li><a href="indexlink.html">Common Link</a></li>
 </ul>
 </body>
 <h1 style="text-align:center"><b>Affordable and Clean Energy</b></h1>
-<img src= "https://chinadialogue-production.s3.amazonaws.com/uploads/content/image/10574/ThinkstockPhotos-640916644.jpg" width="1275" height="550" alt="K9fRdmrS">
+<center><img src= "https://i.ytimg.com/vi/mmSbX1Rg2L0/maxresdefault.jpg" width="1000" height="550" alt="K9fRdmrS"></center>
+<h1>Facts</h1>
+<div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+       <img src="https://textilesforsdgs.org/wp-content/uploads/2018/07/E_INVERTED-SDG-goals_icons-individual-RGB-07.png" alt="Avatar" style="width:300px; height:300px;"/>
+      </div>
+      <div class="flip-box-back" style="background-color: #ffffff;
+        color: #fcc30bff">
+        <h3>Affordable and Clean Energy</h3>
+        <p>Should we be burning coal?</p>
+      </div>
+    </div>
+  </div>
+<h1>Canadian Progress</h1>
+<script type = "text/javascript">
+          function pic1()
+         {
+             document.getElementById("img").src = "images/canada-data7.png";
+         }
+         function pic2()
+         {
+             document.getElementById("img").src ="images/usa-data7.png";
+         } </script>
+
+     <img src = "images/canada-data7.png" id = "img"/> <br> <button class="button" value="Canada" onclick="pic1()">CANADA </button> <button class="button" value="USA"
+     onclick="pic2()">USA</button>
+ <p>Click to toggle Canada's progress vs the USA's.</p>
+<h1>Map</h1>
+<iframe src="https://ourworldindata.org/grapher/energy-use-per-capita" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+<img src= "images/map7.jpg" width="1275" height="550" alt="K9fRdmrS"></center>
+<h1 style="text-align:center; background-color: white">Video</h1>
+<center><iframe width="1275" height="700"
+src="https://www.youtube.com/embed/mmSbX1Rg2L0"></iframe></center>
 </html>
