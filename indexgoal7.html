@@ -134,8 +134,16 @@ li a:hover {
 </body>
 <h1 style="text-align:center"><b>Affordable and Clean Energy</b></h1>
 <center><img src= "https://i.ytimg.com/vi/mmSbX1Rg2L0/maxresdefault.jpg" width="1000" height="550" alt="K9fRdmrS"></center>
-<h1>Facts</h1>
-<div class="flip-box">
+<h1>Facts & Essential Questions</h1>
+<style>
+  #container {
+    width: 100%;
+    display: flex; /* or inline-flex */
+    flex-wrap: wrap;
+  }
+</style>
+<div id = "container">
+  <div class="flip-box">
     <div class="flip-box-inner">
       <div class="flip-box-front">
        <img src="https://textilesforsdgs.org/wp-content/uploads/2018/07/E_INVERTED-SDG-goals_icons-individual-RGB-07.png" alt="Avatar" style="width:300px; height:300px;"/>
@@ -143,10 +151,39 @@ li a:hover {
       <div class="flip-box-back" style="background-color: #ffffff;
         color: #fcc30bff">
         <h3>Affordable and Clean Energy</h3>
-        <p>Should we be burning coal?</p>
+        <p>How can we improve our renewable energy usage?</p>
       </div>
     </div>
   </div>
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front" style="background-color: #ffffff;
+          color: #fcc30bff">
+         <h3>Affordable and Clean Energy</h3>
+         <p style="font-family: Impact">Flip to see the most common forms of renewable energy.</p>
+      </div>
+      <div class="flip-box-back" style="background-color: #ffffff;
+          color: #fcc30bff">
+        <h3>Affordable and Clean Energy</h3>
+        <p>Wind, Solar, Geothermal, Hydro, Tidal, and Biomass are some forms of renewable energy.</p>
+      </div>
+    </div>
+  </div>
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front" style="background-color: #ffffff;
+          color: #fcc30bff">
+         <h3>Affordable and Clean Energy</h3>
+         <p style="font-family: Impact">Flip to see which countries have completed this SDG.</p>
+      </div>
+      <div class="flip-box-back" style="background-color: #ffffff;
+          color: #fcc30bff">
+        <h3>Affordable and Clean Energy</h3>
+        <p>Iceland, Norway, Sweden, Finland, Uruguay, Costa Rica, Brazil, New Zealand, and Canada.</p>
+      </div>
+    </div>
+  </div>
+</div>
 <h1>Canadian Progress</h1>
 <script type = "text/javascript">
           function pic1()
@@ -161,6 +198,37 @@ li a:hover {
      <img src = "images/canada-data7.png" id = "img"/> <br> <button class="button" value="Canada" onclick="pic1()">CANADA </button> <button class="button" value="USA"
      onclick="pic2()">USA</button>
  <p>Click to toggle Canada's progress vs the USA's.</p>
+<h1>G7 Countries Energy Consumption</h1>
+<div>
+<p>Enter a G7 country in the box below.</p>
+<button type="button" class="button" id="clickMe">Find</button>
+
+<input style="font-size:30px" type="text" id="fname" name ="fname">
+
+<p id = "results"></p>
+
+<script>var countries = ["Canada", "France", "Germany", "Italy", "Japan", "United Kingdom", "United States"]
+var consumption = [9589.0, 5112.4, 5149.4, 3434.3, 4753.7, 3964.5, 9207.8]
+
+document.getElementById("clickMe").onclick = clicked;
+
+function clicked() {
+  var value = document.getElementById("fname").value
+  
+  for (i = 0; i < countries.length; i = i + 1) {
+    
+    if(value === countries[i]) {
+      console.log(value+" has an energy consumption of "+consumption[i]+"watts per capita.");
+    document.getElementById("results").innerHTML = value+" has an energy consumption of "+consumption[i]
++" watts per capita! ";
+    }
+
+    
+  }
+}
+
+</script>
+</div>
 <h1>Map</h1>
 <iframe src="https://ourworldindata.org/grapher/energy-use-per-capita" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 <img src= "images/map7.jpg" width="1275" height="550" alt="K9fRdmrS"></center>

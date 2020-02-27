@@ -135,20 +135,63 @@ li a:hover {
 <h1 style="text-align:center"><b>Climate Action</b></h1>
 <img style="padding: 30px" src= "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/08/E-Goal-13-1024x1024.png" width="700" height="600" alt="K9fRdmrS">
 <img src= "https://cdn.vox-cdn.com/thumbor/pbWzK4QOzYgSZegof4eaK5xp9iQ=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13439425/shutterstock_285980522.jpg" width="525" height="575" alt="K9fRdmrS">
-<h1>Facts</h1>
-<div class="flip-box">
-    <div class="flip-box-inner">
-      <div class="flip-box-front">
-       <img src="https://sdgafrica.org/images/SDG17/E_INVERTED_SDG_goals_icons-individual-RGB-13.png" alt="Avatar" style="width:300px; height:300px;"/>
-      </div>
-      <div class="flip-box-back" style="background-color: #ffffff;
-        color: #3f7e44ff">
-        <h3>Climate Action</h3>
-        <p>How will renewable energy reduce our greenhouse gas emissions?</p>
+<h1>Facts & Essential Questions</h1>
+
+<style>
+  #container {
+    width: 100%;
+    display: flex; /* or inline-flex */
+    flex-wrap: wrap;
+  }
+</style>
+<div id = "container">
+  <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+         <img src="https://sdgafrica.org/images/SDG17/E_INVERTED_SDG_goals_icons-individual-RGB-13.png" alt="Avatar" style="width:300px; height:300px;"/>
+        </div>
+        <div class="flip-box-back" style="background-color: #ffffff;
+          color: #3f7e44ff">
+          <h3>Climate Action</h3>
+          <p>How will renewable energy reduce our greenhouse gas emissions?</p>
+        </div>
       </div>
     </div>
-  </div>
+  <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front" style="background-color: #ffffff;
+          color: #3f7e44ff">
+         <h3>Climate Action</h3>
+         <p style="font-family: Impact">Flip to see the most common greenhouse gases in our atmosphere.</p>
+        </div>
+        <div class="flip-box-back" style="background-color: #ffffff;
+          color: #3f7e44ff">
+          <h3>Climate Action</h3>
+          <p>Carbon Dioxide, Methane, nitrous oxide, ozone, and water vapour.</p>
+        </div>
+      </div>
+    </div>
+  <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front" style="background-color: #ffffff;
+          color: #3f7e44ff">
+         <h3>Climate Action</h3>
+         <p style="font-family: Impact">Flip to see which countries have completed this SDG.</p>
+        </div>
+        <div class="flip-box-back" style="background-color: #ffffff;
+          color: #3f7e44ff">
+          <h3>Climate Action</h3>
+          <p>Democratic Republic of the Congo, Central African Republic, Mali, Togo, Benin, Eritrea, Uganda, Jordan, and Moldova.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
 <h1>Canadian Progress</h1>
+
+
+
 <script type = "text/javascript">
           function pic1()
          {
@@ -162,6 +205,37 @@ li a:hover {
      <img src = "images/canada-data13.png" id = "img"/> <br> <button class="button" value="Canada" onclick="pic1()">CANADA </button> <button class="button" value="USA"
      onclick="pic2()">USA</button>
  <p>Click to toggle Canada's progress vs the USA's.</p>
+<h1>G7 Countries Greenhouse Gas Emissions</h1>
+<div>
+<p>Enter a G7 country in the box below.</p>
+<button type="button" class="button" id="clickMe">Find</button>
+
+<input style="font-size:18px" type="text" id="fname" name ="fname">
+
+<p id = "results"></p>
+
+<script>var countries = ["Canada", "France", "Germany", "Italy", "Japan", "United Kingdom", "United States"]
+var emission = [20.94, 6.9, 11.0, 7.05, 10.55, 8.45, 19.9]
+
+document.getElementById("clickMe").onclick = clicked;
+
+function clicked() {
+  var value = document.getElementById("fname").value
+  
+  for (i = 0; i < countries.length; i = i + 1) {
+    
+    if(value === countries[i]) {
+      console.log(value+" has a greenhouse gas emission value of "+emission[i]+"tons per capita.");
+    document.getElementById("results").innerHTML = value+" has a greenhouse gas emission value of "+emission[i]
++" tons per capita! ";
+    }
+
+    
+  }
+}
+
+</script>
+</div>
 <h1>Map</h1>
 <iframe src="https://ourworldindata.org/grapher/internally-displaced-persons-from-disasters?time=2008..2017" style="width: 100%; height: 600px; border: 0px none;"></iframe>
 <img src= "images/map13.jpg" width="1275" height="550" alt="K9fRdmrS"></center>
