@@ -18,6 +18,8 @@ function clicked() {
 
 	//Do i have to look at all elements before making a decision?
 	
+	loc = -1;
+
 	value = document.getElementById("fname").value;
 	console.log(value);
 
@@ -28,9 +30,11 @@ function clicked() {
 		if (countries[i] === value) {
 			found = true;
 			loc = i;
+			break;
 		}
 	}
-	if (found === true) {
+	
+	if (loc !== -1) {
 		ptag = document.getElementById("results");
 		ptag.innerHTML = value+":"+year[loc]+":"+mmratio[loc];
 
